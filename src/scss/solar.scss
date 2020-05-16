@@ -1,0 +1,196 @@
+// Navigation
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+
+  > div {
+    display: flex;
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .center {
+    justify-content: space-between;
+    width: 100%;
+    background: black;
+
+    h2 {
+      align-self: center;
+      padding: 1.5rem;
+      color: #fff;
+      margin-bottom: 0;
+    }
+
+    ul {
+      display: flex;
+      align-self: center;
+      list-style: none;
+      margin-bottom: 0;
+      height: 100%;
+
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        text-decoration: none;
+        color: #fff;
+        padding: 1.5rem;
+      }
+    }
+  }
+}
+
+// Utilities
+.infinity {
+  background: rgb(22, 22, 22);
+}
+
+.img-150-150-effect {
+  width: 200px;
+  //   height: 150px;
+}
+
+.hover-gold:hover {
+  background: rgb(212, 175, 55);
+  transition: 0.5s ease-in;
+}
+
+.solar-card-container {
+  .solar-card:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease-in;
+    background: rgb(49, 43, 43);
+
+    .img-150-150-effect {
+      //   width: 250px;
+      //   height: 150px;
+    }
+  }
+}
+
+.round-img-effect {
+  border-radius: 50%;
+}
+
+.solar-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.solar-img {
+  width: 150px;
+  height: 150px;
+}
+
+.solar-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding-top: 2rem;
+
+  .solar-card {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// Brown
+@media (max-width: 1200px) {
+  body {
+    background: rgb(73, 50, 6);
+  }
+}
+
+// Green
+@media (max-width: 992px) {
+  body {
+    background: rgb(4, 37, 9);
+  }
+
+  .navigation {
+    > div {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .center {
+      flex-direction: column;
+
+      ul {
+        margin-top: 0.05rem;
+        flex-direction: column;
+        align-self: initial;
+        padding-left: 0;
+
+        a {
+          padding: 0.5rem;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .solar-card-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+// Red
+@media (max-width: 768px) {
+  body {
+    background: rgb(80, 10, 10);
+  }
+
+  .solar-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navigation {
+    > div {
+      img {
+        // width: 150px;
+        // height: 150px;
+      }
+      &:first-child {
+        display: none;
+      }
+    }
+
+    .center {
+      h2 {
+        font-size: 1.7rem;
+        padding: 1rem;
+      }
+      ul {
+        margin-top: 1.2rem;
+      }
+    }
+  }
+}
+
+// Blue
+@media (max-width: 500px) {
+  body {
+    background: blue;
+  }
+
+  .navigation {
+    .center {
+      h2 {
+        font-size: 1.7rem;
+      }
+      ul {
+        margin-top: 1.2rem;
+      }
+    }
+  }
+}
